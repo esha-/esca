@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Калькулятор</title>
+    <style>
+      body {
+        background: #c7b39b url(images/f2.jpg);
+        color: #000080;
+      }
+    </style>
+</head>
+  <body>
+    <form action="/cgi-bin/pars.py">
+      <p> Выберите подходящие параметры: </p>
+      <input type="radio" name="type" value='SELL'>Продажа<br>
+      <input type="radio" name="type" value='RENT'>Сдача<br>
+      <p> Город: </p>
+      <select name="rgid" size="1">
+      <option selected="selected" value="587795"> Москва </option>
+      </select>
+      <br>
+      <p> Тип жилья: </p>
+      <input type="radio" name="category" value='APARTMENT'>Квартира<br>
+      <input type="radio" name="category" value='ROOMS'>Комната<br>
+      <p> Выберите ближайшее метро:
+      <select name="metro" size="1">
+      <option selected="selected" value=""></option>
+      <option value="127">Семеновская</option>
+      <option value="173">Партизанская</option>
+      <option value="133">Первомайская</option>
+      <option value="131">Щелковская</option>
+      </select>
+      <p> Количество комнат в квартире:
+      <input type="radio" name="roomsTotal" value='1'>1
+      <input type="radio" name="roomsTotal" value='2'>2
+      <input type="radio" name="roomsTotal" value='3'>3
+      <input type="radio" name="roomsTotal" value='4'>4
+      <input type="radio" name="roomsTotal" value='5'>5<br>
+      <p> Размер общей площади от
+      <input type="text" name='areaMin'>
+      до
+      <input type="text" name='areaMax'>
+      <br><br>
+     <!-- <p> Общая площадь:
+      <br>
+      <p> от
+      <input type="text" name="areaMin">
+      до
+      <input type="text" name="areaMax">
+      <br><br>-->
+      <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>
+
